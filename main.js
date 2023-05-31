@@ -10,7 +10,8 @@ const camera = new THREE.PerspectiveCamera( 30, (window.innerWidth/2) / window.i
 const renderer = new THREE.WebGLRenderer();
 renderer.setClearColor("pink");
 renderer.setSize( window.innerWidth/2, window.innerHeight);
-document.body.appendChild( renderer.domElement );
+//apenndchild to canvas
+document.querySelector('.canvas').appendChild(renderer.domElement);
 
 
 //Make Canvas Responsive
