@@ -39,7 +39,7 @@ const loader = new GLTFLoader();
 let config = null;
 loader.load('donut.glb', function(gltf) {
     config = gltf.scene;
-    config.scale.set(5, 5, 5);
+    config.scale.set(10, 10, 10);
     scene.add(gltf.scene);
 
     //add rotation x y z
@@ -72,4 +72,43 @@ btnGlaze.addEventListener('click', function (e) {
         }
     });
 }
+});
+
+let btnSignups = document.querySelector('.btn--primary')
+btnSignups.addEventListener('click', function () {
+    console.log('signup clicked');
+       //form data
+       let company = document.querySelector('.company').value;
+       let name = document.querySelector('.name').value;
+
+           //Local Storage Items
+    let glaze = localStorage.getItem('glaze');
+    //let topping = localStorage.getItem('topping');
+    //let base = localStorage.getItem('filling');
+
+    fetch('http://localhost:3000/api/v1/donuts', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem('token')
+        },
+        body: JSON.stringify({
+            "name": name,
+            "company": company,
+            "glaze": glaze
+        })
+    }).then(response => response.json()).then(json =>{
+        console.log(json);
+
+  
+        if (json.status == "success") {
+
+          console.log("successsssssss");
+        
+        }
+        else {
+          
+        }
+    });
+
 });
