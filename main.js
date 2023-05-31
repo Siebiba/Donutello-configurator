@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 //Scene
 const scene = new THREE.Scene();
@@ -32,14 +33,21 @@ scene.add(light);
 const ambientLight = new THREE.AmbientLight(0xFFFFFF, 0.4);
 scene.add(ambientLight);
 
+//________________________________
+//Load Model
+const loader = new GLTFLoader();
+let config = null;
+loader.load('donut.glb', function(gltf) {
+    config = gltf.scene;
+    config.scale.set(5, 5, 5);
+    scene.add(gltf.scene);
 
-// Create Box
-const boxGeometry = new THREE.BoxGeometry(1, 1, 1);
-const boxMaterial = new THREE.MeshLambertMaterial({color: 0xFFFFFF});
-const boxMesh = new THREE.Mesh(boxGeometry, 
-boxMaterial);
-boxMesh.rotation.set(40, 0, 40);
-scene.add(boxMesh);
+    //add rotation x y z
+    config.rotation.set(0.5, 1, 0.2);
+    
+});
+
+
 
 camera.position.z = 5;
 
@@ -49,3 +57,19 @@ function animate() {
 }
 
 animate();
+
+
+const btnGlaze = document.querySelector('.colors');
+btnGlaze.addEventListener('click', function (e) {
+    e.preventDefault();
+  if (e.target.classList.contains('recolor-btn')) {
+    console.log("test");
+    config.traverse((child) => {
+        if (child.isMesh) {
+            config.getObjectByName('glaze').material.color.set(e.target.dataset.color);
+            let flavour = e.target.getAttribute('data-glaze');
+            localStorage.setItem('glaze', flavour);
+        }
+    });
+}
+});
