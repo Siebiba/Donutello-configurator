@@ -3,7 +3,7 @@ var btnSignups = document.querySelector('.signup button').addEventListener('clic
     let username = document.querySelector('#email').value;
     let password = document.querySelector('#password').value;
 
-    fetch('http://localhost:3000/users/signup', {
+    fetch('https://donutello-api.onrender.com/users/signup', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
