@@ -58,6 +58,9 @@ camera.position.z = 5;
 function animate() {
 	requestAnimationFrame( animate );
 	renderer.render( scene, camera );
+
+    scene.rotation.y += 0.002;
+    
 }
 
 animate();
