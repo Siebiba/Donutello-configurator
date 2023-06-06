@@ -9,8 +9,12 @@ const camera = new THREE.PerspectiveCamera( 30, (window.innerWidth/2) / window.i
 
 //Renderer
 const renderer = new THREE.WebGLRenderer();
-renderer.setClearColor("pink");
+renderer.setClearColor("white");
+
+
+
 renderer.setSize( window.innerWidth/2, window.innerHeight);
+
 //apenndchild to canvas
 document.querySelector('.canvas').appendChild(renderer.domElement);
 
