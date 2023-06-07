@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My first three.js app</title>
+    <link rel="stylesheet" href="./styles/style.css">
+
+  
+
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.142.0/build/three.module",
+      "three/": "https://unpkg.com/three@0.142.0/"
+    }
+  }
+</script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="configurator">
+            <div class="opties">
+                <h2 class="title">Create youre <span>Donut</span></h2>
+
+
+                <div class="colors">
+                    <div class="optie">
+                        <button class="recolor-btn" data-color="#ffffff" data-glaze="Vanille">
+                        
+                        </button>
+                        <label for="email">Cherry</label>
+                    </div>
+                    <div class="optie">
+                        <button class="recolor-btn"  data-color="#000000" data-glaze="Choco">
+                            
+                        </button>
+                        <label for="Pistach">Pistache</label>
+                    </div>
+                    <div class="optie">
+                        <button class="recolor-btn"  data-color="#ff0000" data-glaze="Strawberry">
+                           
+                        </button>
+                        <label for="test">Chocolate</label>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="configurator-form">
+            
+                <div class="info">
+                    <div>
+                        <input type="text" class="name" name="name" id="name" placeholder="Enter donu name" required>
+                    </div>
+
+                    <div>
+                        <input type="text" class="company" name="name" id="" placeholder="Enter company name" required>
+                    </div>
+
+                    <button class="btn--primary">Let's go</button>
+                </div>
+          
+            </div>
+        </div>
+        <div class="canvas"></div>
+    </div>
+
+
+    <script type="module" src="./scripts/main.js"></script>
+
+</body>
+
+</html>
