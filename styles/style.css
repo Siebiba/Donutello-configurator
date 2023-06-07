@@ -12,6 +12,7 @@ body {
 .content {
     width: 100%;
     height: 100%;
+   
 }
 
 .canvas {
@@ -19,21 +20,23 @@ body {
 }
 
 .configurator {
+    
     float: left;
     width: 50vw;
     height: 100vh;
     background-color: #ffffff;
-   
-    margin: auto;
+   text-align: center;
+    padding: 5% 0;
 }
 
 .opties {
 
-   margin-top: 10vw;
     background-color: #ffffff;
     text-align: center;
     padding:0 10%
 }
+
+
 
 .optie{
    
@@ -65,15 +68,11 @@ label{
 
 
 .opties h2 span{
-   color: #c51ca0;
-   font-size: 120px;
+   color: #e72870;
+   
 }
 
-@media screen and (max-width: 900px) {
-    .opties h2 span {
-        font-size: 80px;
-    }
-}
+
 
 label {
     font-size: 1rem;
@@ -110,6 +109,18 @@ img {
     height: 80px;
     border-radius: 50%;
     border: none;
+}
+
+.cherry{
+    background-color: #f7022a;
+}
+
+.pistache{
+    background-color: #92c471;
+}
+
+.chocolate{
+    background-color: #3d1c0d;
 }
 
 .recolor-btn:hover {
@@ -155,5 +166,31 @@ input {
 
 .btn--primary:hover {
     background-color: #3ec7d1;
+    color: #ffffff;
+    cursor: pointer;
     
+}
+
+h3{
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1em; 
+    color: black
+  
+}
+
+.hidden
+{
+  display:none;
+}
+
+.alert
+{
+  background-color: rgb(247,242,73);
+  padding: 0.5em;
+  margin-bottom: 1em;
+  color: #000000;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
 }

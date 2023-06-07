@@ -1,6 +1,12 @@
 var btnSignups = document.querySelector('.signup button').addEventListener('click', function () {
+    
+    let feedback = document.querySelector('.alert');
+            feedback.textContent = "Checking credentials";
+            feedback.classList.remove('hidden');
+    
+    
     console.log('signup clicked');
-    let username = document.querySelector('#email').value;
+    let username = document.querySelector('#username').value;
     let password = document.querySelector('#password').value;
 
     fetch('https://donutello-api.onrender.com/users/login', {
@@ -20,7 +26,7 @@ var btnSignups = document.querySelector('.signup button').addEventListener('clic
 
           
             let feedback = document.querySelector('.alert');
-            feedback.textContent = "Signup success";
+            feedback.textContent = "Login success";
             feedback.classList.remove('hidden');
 
             let token = json.data.token;
@@ -31,7 +37,7 @@ var btnSignups = document.querySelector('.signup button').addEventListener('clic
         }
         else {
             let feedback = document.querySelector('.alert');
-            feedback.textContent = "Signup failed";
+            feedback.textContent = "Login failed";
             feedback.classList.remove('hidden');
         }
     });

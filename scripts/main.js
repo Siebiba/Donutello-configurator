@@ -41,7 +41,7 @@ scene.add(ambientLight);
 //Load Model
 const loader = new GLTFLoader();
 let config = null;
-loader.load('donut.glb', function(gltf) {
+loader.load('./assets/models/donut.glb', function(gltf) {
     config = gltf.scene;
     config.scale.set(10, 10, 10);
     scene.add(gltf.scene);
@@ -83,6 +83,11 @@ btnGlaze.addEventListener('click', function (e) {
 
 let btnSignups = document.querySelector('.btn--primary')
 btnSignups.addEventListener('click', function () {
+
+    let feedback = document.querySelector('.alert');
+            feedback.textContent = "Donut wordt verzonden";
+            feedback.classList.remove('hidden');
+
     console.log('signup clicked');
        //form data
        let company = document.querySelector('.company').value;
@@ -109,6 +114,9 @@ btnSignups.addEventListener('click', function () {
 
   
         if (json.status == "success") {
+            let feedback = document.querySelector('.alert');
+            feedback.textContent = "Send succes";
+            feedback.classList.remove('hidden');
             window.location.href = "confirm.html";
            //local storage clear
               localStorage.clear();
@@ -116,6 +124,10 @@ btnSignups.addEventListener('click', function () {
         
         }
         else {
+
+            let feedback = document.querySelector('.alert');
+            feedback.textContent = "Sending failed";
+            feedback.classList.remove('hidden');
           
         }
     });

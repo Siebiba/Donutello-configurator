@@ -1,7 +1,11 @@
 var btnSignups = document.querySelector('.signup button').addEventListener('click', function () {
     console.log('signup clicked');
-    let username = document.querySelector('#email').value;
+    let username = document.querySelector('#username').value;
     let password = document.querySelector('#password').value;
+
+    let feedback = document.querySelector('.alert');
+            feedback.textContent = "Registering";
+            feedback.classList.remove('hidden');
 
     fetch('https://donutello-api.onrender.com/users/signup', {
         method: 'POST',

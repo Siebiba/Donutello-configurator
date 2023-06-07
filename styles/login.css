@@ -51,18 +51,23 @@ img{
   border-radius: 0 0 1em 1em;
 }
 
+h2{
+  text-align: center;
+  margin-bottom: 1em;
+}
 
 .btn
 {
-  font-size: 1em;
-  padding: 0.5em;
+  font-size: 1.2em;
+  padding: 0.6em 2em;
   font-weight: bold;
-  border-radius: 0.2em;
+  border-radius: 2em;
   border: none;
   color: white;
   background-color: #e72870;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 100%;
 }
 
 .btn:active
@@ -78,10 +83,13 @@ img{
 
 .alert
 {
-  background-color: #B4C4E7;
+  background-color: rgb(247,242,73);
   padding: 0.5em;
   margin-bottom: 1em;
-  color: #32549d;
+  color: #000000;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
 }
 
 .btn:hover
@@ -89,4 +97,9 @@ img{
   background-color: #3ec7d1;
   color: #ffffff;
   cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color: #e72870;
 }
