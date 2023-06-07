@@ -110,8 +110,8 @@ btnSignups.addEventListener('click', function () {
   
         if (json.status == "success") {
             window.location.href = "confirm.html";
-           //local storage clear glaze key
-              localStorage.removeItem('glaze');
+           //local storage clear
+              localStorage.clear();
 
         
         }
