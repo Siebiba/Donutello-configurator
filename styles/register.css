@@ -6,6 +6,23 @@ body
   font-family: Helvetica, sans-serif;
   background-color: #DDDDDD;
   margin: auto;
+ 
+}
+
+nav{
+  background-color: #e72870;
+  color: white;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: absolute;
+  border-radius: 1em 1em 0 0;
+}
+
+img{
+  width: 100px;
+  
 }
 
 .input--text::placeholder
@@ -20,83 +37,20 @@ body
   padding: 0.4em;
   color: #000;
   margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.2em;
 }
 
 .app
 {
   background-color: white;
   width: 400px;
-  box-shadow: 0px 0px 1em #ccc;
+
   font-size: 1.25em;
   padding: 1em;
+  border-radius: 0 0 1em 1em;
 }
 
-.todos
-{  
-  
-}
-
-.todo
-{
-  border-top: 1px solid #ddd;
-  color: #F94D35;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0.8em;
-}
-
-.todo__delete
-{
-  margin-left: auto;
-  color: blue;
-}
-
-.todo__delete:active
-{
-  color: red;
-}
-
-.todo__state
-{
-  margin-right: 0.5em;  
-}
-
-.todo--completed
-{
-  color: #fcb3a8;
-}
-
-.todo--completed .todo__text
-{
-  display: inline-block;
-  position: relative;
-}
-
-.todo--completed .todo__state
-{
-  visibility: hidden;
-}
-
-.todo--completed .todo__state::before
-{
-  content: "✔";
-  visibility: visible;  
-  color: red;
-  position: relative;
-  top: -0.2em;
-}
-
-.todo--completed .todo__text::before
-{
-  content: " ";
-  display: block;
-  position: absolute;
-  height: 0.1em;
-  width: 100%;
-  margin-top: calc(1em / 2 - 2px);
-  border-bottom: 3px solid #F94D35;
-}
 
 .btn
 {
@@ -106,8 +60,9 @@ body
   border-radius: 0.2em;
   border: none;
   color: white;
-  background-color: #F94D35;
+  background-color: #e72870;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .btn:active
@@ -127,4 +82,11 @@ body
   padding: 0.5em;
   margin-bottom: 1em;
   color: #32549d;
+}
+
+.btn:hover
+{
+  background-color: #3ec7d1;
+  color: #ffffff;
+  cursor: pointer;
 }
