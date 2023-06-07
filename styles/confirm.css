@@ -1,0 +1,44 @@
+* {box-sizing: border-box;}
+html { height: 100%; display: flex; }
+
+body
+{
+  font-family: Helvetica, sans-serif;
+  background-color: #DDDDDD;
+  margin: auto;
+ 
+}
+
+nav{
+  background-color: #e72870;
+  color: white;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: absolute;
+  border-radius: 1em 1em 0 0;
+}
+
+p{
+  font-size: 1.5em;
+  color: #a7a7a7;
+  margin: 0.5em 0;
+}
+
+
+img{
+    width: 100px;
+    
+  }
+  
+  .app
+  {
+    background-color: white;
+    width: 400px;
+  
+    font-size: 1.25em;
+    padding: 1em;
+    border-radius: 0 0 1em 1em;
+  }
+  
