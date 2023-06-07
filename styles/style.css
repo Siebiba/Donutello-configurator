@@ -55,7 +55,7 @@ label{
 
 .opties h2{
     font-weight: 600;
-    margin-top: 20%;
+   
     margin-bottom: 0; 
     padding: 0 3rem 3rem 3rem;
   
@@ -141,7 +141,7 @@ input {
 }
 
 .btn--primary {
-    background-color: #1cc5c5;
+    background-color: #e72870;
     padding: 10px 16px;
     margin: 1em auto;
     outline: 0;
@@ -154,6 +154,6 @@ input {
 }
 
 .btn--primary:hover {
-    background-color: #e72287;
+    background-color: #3ec7d1;
     
 }
